@@ -1,39 +1,21 @@
 import React from 'react'
-import { 
-    BrowserRouter as Router, 
-    Switch,
-    Route,
-    Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-export const Nav = (routes) => {
+export const Nav = (props) => {
+    const { routes } = props;
     return (
-        <Router>
-            <nav>
-                <ul>
-                    {
-                        routes.map(route => {
-                            return (
-                                <li>
-                                    <Link to={`/${route.path}`}>{route.name}</Link>
-                                </li>
-                            )
-                        }) 
-                    }
-                </ul>
-            </nav>
-            <Switch>
+        <nav>
+            <ul>
                 {
-                    routes.map(route => (
-                        <Route
-                            key={route.path}
-                            path={route.path}
-                            type={route.type}
-                            component={route.component}
-                        />
-                    ))
+                    routes.map(route => {
+                        return (
+                            <li key={route.path}>
+                                <Link to={`${route.path}`}>{route.name}</Link>
+                            </li>
+                        )
+                    })
                 }
-            </Switch>
-        </Router>
+            </ul>
+        </nav>
     )
 }
