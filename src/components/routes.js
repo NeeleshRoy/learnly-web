@@ -9,7 +9,7 @@ export const routes = [
     },
     {
         path: '/problems',
-        name: 'problems',
+        name: 'Problems',
         component: Problems
     }
 ];

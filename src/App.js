@@ -3,22 +3,27 @@ import { Nav } from './components';
 import { routes } from './components/routes';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Image from 'react-bootstrap/Image'
+import { Container, Row } from 'react-bootstrap';
 
 import './sass/app.scss';
 
 function App() {
   return (
-    <div className="App">
-      <div className="learnly-header">
-        <div className="logo">
-          <Image
-            src='./static/images/learnly-logo.png'
-            alt='learnly logo'
-            tab-index="-1"
-          />
-        </div>
-        <Router>
-          <Nav routes={routes} />
+    <Router>
+      <Container>
+        <div className="App">
+          <Row>
+            <header>
+              <div className="logo">
+                <Image
+                  src='./static/images/learnly-logo.png'
+                  alt='learnly logo'
+                  tab-index="-1"
+                />
+              </div>
+              <Nav routes={routes} />
+            </header>
+          </Row>
           <Switch>
             {
               routes.map(route => {
@@ -37,9 +42,9 @@ function App() {
               })
             }
           </Switch>
-        </Router>
-      </div>
-    </div>
+        </div>
+      </Container>
+    </Router>
   );
 }
 
