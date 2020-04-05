@@ -1,6 +1,11 @@
 # Learnly Web
 A view application to render the frontend of learnly ecosystem
 
+## Local setup
+1. clone the repo & cd into it
+2. npm i
+3. npm start
+
 ## Available Scripts
 
 In the project directory, you can run:
