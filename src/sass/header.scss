@@ -1,0 +1,28 @@
+header {
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    .logo {
+        margin-top: 20px;
+        padding-bottom: 20px;
+        img {
+            max-width: $logo-width;
+        }
+    }
+    nav {
+        margin-top: 20px;
+        padding-bottom: 20px;
+        ul {
+            display: flex;
+            li {
+                margin-left: 20px;
+                padding: 5px;
+                text-decoration: none;
+                list-style: none;
+                a {
+                    color: #4F71F4;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

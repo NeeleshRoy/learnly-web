@@ -1,0 +1,15 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./patterns.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Serif&display=swap');
+
+
+@import "./header.scss";
+@import "./Home.scss";
+
+img {
+    width: 100%;
+}
